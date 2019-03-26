@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center; }
+
+h1 {
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  letter-spacing: 20px; }
+
+a:link {
+  color: black;
+}
+
+nav {
+  word-spacing: 2em;
+}
+
+a:visited {
+  color: rgb(0, 0, 0); }
+
+/*# sourceMappingURL=style.css.map */
