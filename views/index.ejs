@@ -7,6 +7,92 @@
   <body>
     <h1><%= title %></h1>
     <p><%= desc %></p>
-    <p><nav><a href="https://github.com/blake626">Github</a> <a href="https://www.instagram.com/oceancreme/">Insta</a></nav></p>
+    <p><nav><a href="https://github.com/blake626"><img src="/images/github-mark.png"></a>
+            <a href="https://www.instagram.com/oceancreme/"><img src="/images/glyph-mark.png" height="32" width="32"></a>
+      </nav>
+      <img id="painting" src="/art/wavespainting.jpg">
+    </p>
+
+    <div class="tabs">
+        <button class="tab" onclick="openTab(event,'about')">About</button>
+      <button class="tab" onclick="openTab(event,'cse')">Computer Science</button>
+      <button class="tab" onclick="openTab(event,'art')">Art</button>
+    </div>
+
+    <div id="about" class="tabcontent">
+        <button class="x" onclick="this.parentElement.style.display='none'; document.getElementsByClassName('tab active').className.replace
+        ( /(?:^|\s)MyClass(?!\S)/g , '' )">X</button>
+        <p id="aboutcontent">
+          I don't know if I'd call it passion but I'm interested in a lot of things. I enjoy learning on the fly and coming up
+           with ideas. The artist in me wants to be creative in all facets of life and so I got into programming as well.
+        </p>
+      </div>
+
+    <div id="cse" class="tabcontent">
+      <button class="x" onclick="this.parentElement.style.display='none'; document.getElementsByClassName('tab active').className.replace
+      ( /(?:^|\s)MyClass(?!\S)/g , '' )">X</button>
+      <p>
+        <div class="list">
+        <h6>Concepts</h6>
+        <ul>
+          <li>Object-oriented Programming</li>
+          <li>Web and Mobile Application Development</li>
+          <li>Database Management</li>
+        </ul>
+        </div>
+        <div class="list">
+        <h6>Languages</h6>
+        <ul>
+          <li>Python</li>
+          <li>C/C++</li>
+          <li>Javascript</li>
+          <li>R</li>
+          <li>C#</li>
+          <li>x86 ARM Assembly</li>
+        </ul>
+      </div>
+      </p>
+    </div>
+
+    <div id="art" class="tabcontent">
+      <button class="x" onclick="this.parentElement.style.display='none'; document.getElementsByClassName('tab active').className.replace
+      ( /(?:^|\s)MyClass(?!\S)/g , '' )">X</button>
+      <p>
+        <div class="list">
+        <h6>Mediums</h6>
+        <ul id="list">
+          <li>Oils</li>
+          <li>Acrylics</li>
+          <li>Pen/Pencil</li>
+        </ul>
+        </div>
+        <div class="list">
+        <h6>Subjects</h6>
+        <ul id="list">
+          <li>Water</li>
+          <li>Cartoons</li>
+          <li>Ruins</li>
+          <li>Nature</li>
+        </ul>
+        </div>
+      </p>
+    </div>
+
+    <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "inline-block";
+      evt.currentTarget.className += " active";
+      }
+    </script>
+
   </body>
 </html>
