@@ -96,4 +96,8 @@ li {
   padding: 25px;
 }
 
+img {
+  filter: grayscale();
+}
+
 /*# sourceMappingURL=style.css.map */
