@@ -101,8 +101,7 @@ img {
 }
 
 .list {
-  width: 1000px;
-  display: inline-block;
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */
