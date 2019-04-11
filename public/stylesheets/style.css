@@ -100,4 +100,8 @@ img {
   filter: grayscale();
 }
 
+.list {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=style.css.map */
