@@ -9,7 +9,7 @@
     <p><%= desc %></p>
     <p><nav><a href="https://github.com/blake626"><img src="/images/github-mark.png"></a>
             <a href="https://www.instagram.com/oceancreme/"><img src="/images/glyph-mark.png" height="32" width="32"></a>
-            <a href="mailto:will2817@msu.edu?Subject=Hi%20from%20your%20site!"><img src="/images/email-mark.png" height="32" width="32"></a>
+            <a href="mailto:blake.will1996@gmail.com?Subject=Hi%20from%20your%20site!"><img src="/images/email-mark.png" height="32" width="32"></a>
             <button class="textform"><img src="/images/text-mark.png" height="32" width="32"></button>
       </nav>
       <img id="painting" src="/art/wavespainting.jpg">
@@ -118,11 +118,47 @@
         <div class="list">
         <h6>Projects</h6>
         <ul id="list">
-          <li><a href="http://webdev.cse.msu.edu/~will2817/project3/">Enigma Machine Web Application</a> using Javascript and PHP</li>
-          <li><a href="http://webdev.cse.msu.edu/~will2817/step4/welcome.php">Stalking the Wumpus Game</a> using PHP</li>
+          <ul>This Website
+          <li>Made with NodeJS and ExpressJS, styled with HTML/CSS</li>
+          <li>Clicking the Mail icon allows visitors to send me an e-mail</li>
+          <li>Clicking the Speech icon will soon allow visitors to text me from the website using a GET request and Twilio API</li>
+        </ul>
+          <ul><a href="http://webdev.cse.msu.edu/~will2817/project3/">Enigma Machine Web Application</a>
+          <li>Made with Javascript, PHP and HTML/CSS</li>
+          <li>Web page replica of the Enigma Machine cipher machine used during WWII (also featured in <i>The Imitation Game</i></li>
+          <li>All buttons are clickable and turn red upon clicking</li>
+          <li>Settings page allows for editting the rotors and setting them</li>
+          <li>Batch page allows user to input a message and encode it. It can be decoded using the same settings it was encoded with</li>
+        </ul>
+          <ul><a href="http://webdev.cse.msu.edu/~will2817/step4/welcome.php">Stalking the Wumpus Game</a>
+            <li>Made with PHP, styled with HTML/CSS</li>
+            <li>Clicking start game will bring you to a page where you can click rooms</li>
+            <li>Rooms display horizontally with numbers to indicate which room</li>
+            <li>Text hints are displayed if player is close to a room with birds, a pit, or the Wumpus</li>
+            <li>Amount of arrows remaining is always displayed and deincrements as arrows are used</li>
+            <li>Shoot arrow button allows player to try and attack Wumpus if not in same room</li>
+            <li>Starting a game will use a random seed to select the room the player starts in</li>
+          </ul>
+          <ul><a href="http://www.capstone.cse.msu.edu/2019-01/projects/spectrum-health/">Patient Training Tool</a> for Google Home and Amazon Alexa
+          <li>Made using Dialogflow for NLP, NodeJS for the webhook and SQL for the database</li>
+          <li>User can say symptoms that they are experiencing, symptoms are extracted as entities in Dialogflow</li>
+          <li>Those entities are passed to a NodeJS webhook which will do work depending on the intent passing the entities in</li>
+          <li>A database query is done to find a matching condition which is then voiced by the smart speaker</li>
+          <li>The application will then recommend a health service to use based on the condition</li>
+          <li>User can use the recommended service or pick another which will then be used to weight further recommendations</li>
+        </ul>
         </ul>
         </div>
       </p>
+    </div>
+
+    <div class="popupForm">
+      <form action="http://blake-contact.herokuapp.com/" method="GET">
+        Name: <input type="text" name="name"><br>
+        Message: <textarea name="msg"></textarea><br>
+        Contact Info: <input type="text" name="contact"><br>
+        <input type="submit" value="Send">
+    </form>
     </div>
 
     <script>
