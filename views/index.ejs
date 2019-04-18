@@ -16,10 +16,10 @@
     </p>
 
     <div class="tabs">
-        <button class="tab" onclick="openTab(event,'about')" href="#about">About</button>
-      <button class="tab" onclick="openTab(event,'cse')" href="#cse">Computer Science</button>
-      <button class="tab" onclick="openTab(event,'art')" href="#art">Art</button>
-      <button class="tab" onclick="openTab(event,'projects')" href="#projects">Notable Projects</button>
+        <button class="tab" onclick="openTab(event,'about'); closeForm();" href="#about">About</button>
+      <button class="tab" onclick="openTab(event,'cse'); closeForm();" href="#cse">Computer Science</button>
+      <button class="tab" onclick="openTab(event,'art'); closeForm();" href="#art">Art</button>
+      <button class="tab" onclick="openTab(event,'projects'); closeForm();" href="#projects">Notable Projects</button>
     </div>
 
     <div id="about" class="tabcontent">
@@ -189,6 +189,14 @@
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
+    }
+
+    function openForm() {
+      document.getElementById("popupForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
     }
 
     function toggleForm() {
