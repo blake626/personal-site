@@ -101,6 +101,7 @@ li {
 
 img {
   filter: grayscale();
+  width: 100%;
 }
 
 .textform {
