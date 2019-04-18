@@ -118,6 +118,7 @@ form {
   align-content: center;
   margin: 0 auto;
   width: 250px;
+  animation: fadeEffect 1s;
 }
 
 form label {
