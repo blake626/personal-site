@@ -110,4 +110,28 @@ img {
   cursor: pointer;
 
 }
+
+form {
+  max-width: 300px;
+  padding: 10px;
+  background-color: black;
+  align-content: center;
+  margin: 0 auto;
+  width: 250px;
+}
+
+form label {
+  color: white;
+}
+
+form button {
+  max-width: 160px;
+}
+
+#submission {
+  width: 100%;
+  height: 100%;
+  
+}
+
 /*# sourceMappingURL=style.css.map */

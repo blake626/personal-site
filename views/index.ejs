@@ -7,10 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p><%= desc %></p>
-    <p><nav><a href="https://github.com/blake626"><img src="/images/github-mark.png"></a>
-            <a href="https://www.instagram.com/oceancreme/"><img src="/images/glyph-mark.png" height="32" width="32"></a>
-            <a href="mailto:blake.will1996@gmail.com?Subject=Hi%20from%20your%20site!"><img src="/images/email-mark.png" height="32" width="32"></a>
-            <button class="textform"><img src="/images/text-mark.png" height="32" width="32"></button>
+    <p><nav><a href="https://github.com/blake626"><img src="/images/github-mark.png" title="Check out my GitHub!"></a>
+            <a href="https://www.instagram.com/oceancreme/"><img src="/images/glyph-mark.png" height="32" width="32" title="Instagram"></a>
+            <a href="mailto:blake.will1996@gmail.com?Subject=Hi%20from%20your%20site!"><img src="/images/email-mark.png" height="32" width="32" title="E-mail me!"></a>
+            <button class="textform" onclick="toggleForm()"><img src="/images/text-mark.png" height="32" width="32" title="Shoot me a text!"></button>
       </nav>
       <img id="painting" src="/art/wavespainting.jpg">
     </p>
@@ -143,7 +143,7 @@
           </ul>
           <br>
           <ul><a href="http://www.capstone.cse.msu.edu/2019-01/projects/spectrum-health/">Patient Training Tool</a> for Google Home and Amazon Alexa<br>
-          <li>Made using Dialogflow for NLP, NodeJS for the webhook and SQL for the database</li>
+          <li>Made using Dialogflow for NLP, NodeJS for the webhook and SQL for the database, deployed through Microsoft Azure</li>
           <li>User can say symptoms that they are experiencing, symptoms are extracted as entities in Dialogflow</li>
           <li>Those entities are passed to a NodeJS webhook which will do work depending on the intent passing the entities in</li>
           <li>A database query is done to find a matching condition which is then voiced by the smart speaker</li>
@@ -155,14 +155,18 @@
       </p>
     </div>
 
-<!--     <div class="popupForm">
-      <form action="http://blake-contact.herokuapp.com/" method="GET">
-        Name: <input type="text" name="name"><br>
-        Message: <textarea name="msg"></textarea><br>
-        Contact Info: <input type="text" name="contact"><br>
-        <input type="submit" value="Send">
+    <div id="popupForm" style="display: none;">
+      <form action="http://blake-contact.herokuapp.com/" method="GET" target="http://williamsbl.herokuapp.com">
+        <label for="name"><b>Name</b></label><br>
+        <input type="text" placeholder="Enter Name" name="name" required><br>
+        <label for="name"><b>Message</b></label><br>
+        <textarea name="msg" placeholder="Enter your message" required></textarea><br>
+        <label for="name"><b>Contact Info</b></label><br>
+        <input type="text" placeholder="Enter your preferred method of contact" name="contact" required><br>
+        <br>
+        <button id="submission" type="submit" value="Send">Send</button><br>
     </form>
-    </div> -->
+    </div>
 
     <script>
     function openTab(evt, tabName) {
@@ -178,6 +182,16 @@
       document.getElementById(tabName).style.display = "inline-block";
       evt.currentTarget.className += " active";
       }
+
+    function toggleForm() {
+      if(document.getElementById("popupForm").style.display == "none"){
+        document.getElementById("popupForm").style.display = "block";
+      }
+      else{
+        document.getElementById("popupForm").style.display = "none";
+      }
+    }
+
     </script>
 
   </body>
